@@ -1,2 +1,2 @@
 # QuizzApp
-a simple quizz app using firestone and react-native
+a simple quizz app using firestore and react-native
