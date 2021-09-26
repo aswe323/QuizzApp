@@ -109,6 +109,4 @@ const styles = StyleSheet.create({
   },
 });
 
-console.log("testing");
-
 export default App;
