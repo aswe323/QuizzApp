@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
-import { Card, ListItem, Button, Icon } from 'react-native-elements'
+import { Card, ListItem, Button, Icon } from 'react-native-elements';
 
 const styles = StyleSheet.create({
   container: {
@@ -14,26 +14,31 @@ const styles = StyleSheet.create({
   },
 });
 
-const FlatListBasics = () => {
-  return (
-    <View style={styles.container}>
-      <FlatList
-        data={[
-          {key: ['Devin','55']},
-          {key: 'Dan'},
-          {key: 'Dominic'},
-          {key: 'Jackson'},
-          {key: 'James'},
-          {key: 'Joel'},
-          {key: 'John'},
-          {key: 'Jillian'},
-          {key: 'Jimmy'},
-          {key: 'Julie'},
-        ]}
-        renderItem={({item}) => <Text style={styles.item}>{item.key}</Text> }
-      />
+function card(title,text,imageSource) {
+    return(
+    <View>
+    <Card>
+      <Card.Title>{title}</Card.Title>
+      <Card.Divider/>
+      <Card.Image source ={{uri:imageSource}}>
+            <Card.FeaturedTitle>{text}</Card.FeaturedTitle>
+
+      </Card.Image>
+      <Card.Divider/>
+
+    </Card>
     </View>
   );
 }
 
-export default FlatListBasics;
+
+const shower = () =>{
+  return(
+    <View >
+    {card("Cat","what a cute cat","https://kerenagam.co.il/wp-content/uploads/2021/06/Thinking-of-getting-a-cat.png")}
+    </View>
+  );
+}
+
+
+export default shower;
